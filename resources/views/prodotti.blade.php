@@ -16,5 +16,10 @@
             <li><a href="#">News</a></li>
         </ul>
     </header>
+    <main>
+        <div class="products_template">
+            
+        </div>
+    </main>
 </body>
 </html>
