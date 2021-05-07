@@ -1,0 +1,27 @@
+header {
+    text-align: center;
+    
+    img {
+        &.logo {
+            width: 200px;
+        }
+    }
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-top: 40px;
+
+        a {
+            padding: 15px 8px;
+            font-size: 26px;
+            color: $text_color_dark;
+            &.active {
+                background-color: $bg_color_secondary;
+            }
+        }
+    }
+
+
+}
