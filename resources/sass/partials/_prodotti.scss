@@ -10,13 +10,13 @@ header {
     ul {
         display: flex;
         justify-content: center;
-        list-style: none;
         margin-top: 40px;
 
         a {
             padding: 15px 8px;
             font-size: 26px;
             color: $text_color_dark;
+            display: block;
             &.active {
                 background-color: $bg_color_secondary;
             }
@@ -24,4 +24,29 @@ header {
     }
 
 
+}
+
+main {
+    background-image: url('../images/fondo-pag-speciali.jpg');
+    padding-top: 80px;
+    h2 {
+        text-transform: uppercase;
+        color: $text_color_primary;
+        width: 100%;
+        text-align: left;
+        font-size: 30px;
+        margin: 30px 0;
+    }
+
+    .products_template {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: calc(100% / 3 - 10px);
+            margin: 5px;
+        }
+        img {
+            width: 100%;
+        }
+    }
 }

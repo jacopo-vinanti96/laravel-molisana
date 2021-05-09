@@ -138,6 +138,25 @@ Route::get('/', function () {
         ]
     ];
 
+    $footer_rows = [
+        [
+            'img' => 'images/marchio-sito-test.png',
+            'elems' => [
+                'Ragione sociale: La Molisana S.P.A.',
+                'Sede legale: Contrada Colle delle Api, 100/A',
+                '86100 - Campobasso (CB)',
+                'Pec: lamolisana@pec.it',
+                'Tel: +39 08744981',
+                'Fax: +39 0874 629584',
+                'info@lamolisana.it (per segnalazioni degli utenti)',
+                'commerciale@lamolisana.it',
+                'export@lamolisana.it',
+                'numero verde 800818081',
+                'telefono 3801292455',
+            ]
+        ]
+    ];
+
     $lunghe = [];
     $corte = [];
     $cortissime = [];
@@ -151,8 +170,23 @@ Route::get('/', function () {
             $cortissime[] = $data[$i];
         }
     }
-    
-    var_dump($lunghe, $corte, $cortissime);
 
-    return view('prodotti', $data);
+    $types = [
+        [
+            'elems' => $lunghe,
+            'title' => 'le lunghe',
+        ],
+        [
+            'elems' => $corte,
+            'title' => 'le corte',
+        ],
+        [
+            'elems' => $cortissime,
+            'title' => 'le cortissime',
+        ],
+    ];
+
+    return view('prodotti')
+    ->with( 'types', $types )
+    ->with( 'footer_rows', $footer_rows);
 });
