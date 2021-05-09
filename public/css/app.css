@@ -1,3 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+a:visited {
+  color: currentColor;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
 header {
   text-align: center;
 }
@@ -43,27 +72,36 @@ main .products_template img {
   width: 100%;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+footer {
+  color: #8A92A0;
+  padding-top: 30px;
 }
-
-a {
-  text-decoration: none;
+footer::after {
+  background-image: url("../images/footer-montagne-bottom.jpg");
+  background-size: cover;
+  background-position: center;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 150px;
 }
-a:focus {
-  outline: none;
+footer .container {
+  max-height: 610px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-a:visited {
-  color: currentColor;
+footer .container .footer__wrapper {
+  margin-top: 20px;
+  width: calc( 100% / 3 );
 }
-
-ul {
-  list-style: none;
+footer .container .footer__wrapper h3 {
+  font-size: 25px;
+  text-transform: uppercase;
 }
-
-.container {
-  width: 1200px;
-  margin: auto;
+footer .container .footer__wrapper ul {
+  margin-top: 20px;
+}
+footer .container .footer__wrapper ul .footer__link:not(:last-child) {
+  margin-bottom: 10px;
 }
