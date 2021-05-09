@@ -25,3 +25,35 @@ ul {
     width: 1200px;
     margin: auto;
 }
+
+
+//MIXIN
+@mixin media-lg {
+    @media screen and (max-width: $lg_size) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (max-width: $md_size) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media screen and (max-width: $sm_size) {
+        @content;
+    }
+}
+    
+@include media-lg {
+    .container {
+        width: 900px;
+    }
+}
+
+@include media-md {
+    .container {
+        width: 85%;
+    }
+}

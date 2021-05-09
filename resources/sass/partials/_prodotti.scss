@@ -45,6 +45,20 @@ main {
             width: calc(100% / 3 - 10px);
             margin: 5px;
         }
+        //li media queries 
+        @include media-md {
+            li {
+                width: calc(100% / 2 - 10px);
+            }
+        }
+
+        @include media-sm {
+            li {
+                width: 100%;
+                margin: 5px;
+            }
+        }
+
         img {
             width: 100%;
         }
@@ -81,6 +95,18 @@ footer {
                     margin-bottom: 10px;
                 }
             }
+        }
+        //wrapper media query
+        @include media-md {
+            .footer__wrapper {
+                width: 100%;
+            }
+        }
+    }
+    @include media-md {
+        .container {
+            flex-direction: row;
+            max-height: none;
         }
     }
 }
