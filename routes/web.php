@@ -49,4 +49,12 @@ Route::get('/', function () {
 
     return view('home')
     ->with( 'types', $types );
-});
+})->name('home');
+
+Route::get('/prodotto/{id?}', function ($id = 0) {
+
+    $data = config('paste');
+    return view('prodotti')
+    ->with( 'data', $data )
+    ->with( 'id', $id );
+})->name('prodotti');

@@ -18,9 +18,9 @@ $footer_rows = config('footer_rows');
     <header>
         <img class="logo" src="{{ asset('images/marchio-sito-test.png') }}" alt="Logo Molisana">
         <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">Prodotti</a></li>
-            <li><a href="#">News</a></li>
+            <li><a class="active" href={{ route('home') }}>Home</a></li>
+            <li><a href={{ route('prodotti') }}>Prodotti</a></li>
+            <li><a href={{ route('home') }}>News</a></li>
         </ul>
     </header>
     @yield('main')
