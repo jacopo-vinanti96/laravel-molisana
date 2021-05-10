@@ -52,10 +52,10 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/prodotto/{id?}', function ($id = 0) {
-    if ( (int)$id < 0 || (int)$id > count( config('paste') ) ) {
+    $data = config('paste');
+    if ( $id < 0 || $id >= count( $data ) ) {
         abort(404);
     }
-    $data = config('paste');
     return view('prodotti')
     ->with( 'data', $data )
     ->with( 'id', $id );
