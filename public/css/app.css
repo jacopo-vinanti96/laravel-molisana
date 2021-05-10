@@ -6,6 +6,7 @@
 
 a {
   text-decoration: none;
+  color: currentColor;
 }
 a:focus {
   outline: none;
@@ -93,9 +94,26 @@ header ul a.active {
   width: 100%;
 }
 
+.prodotti__main {
+  padding: 50px 0;
+  background-color: #B8DAE4;
+}
+.prodotti__main h1, .prodotti__main p {
+  color: #002d73;
+}
+.prodotti__main h1 {
+  text-align: center;
+}
+.prodotti__main img {
+  width: 100%;
+}
+.prodotti__main p {
+  font-size: 20px;
+}
+
 footer {
-  color: #8A92A0;
   padding-top: 30px;
+  color: #8A92A0;
 }
 footer::after {
   background-image: url("../images/footer-montagne-bottom.jpg");

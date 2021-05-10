@@ -1,6 +1,6 @@
 footer {
-    color: $text_color_footer;
     padding-top: 30px;
+    color: $text_color_footer;
     &::after {
         background-image: url('../images/footer-montagne-bottom.jpg');
         background-size: cover;
