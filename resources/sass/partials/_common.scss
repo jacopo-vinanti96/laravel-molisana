@@ -19,14 +19,6 @@ ul {
     list-style: none;
 }
 
-// Common classes
-
-.container {
-    width: 1200px;
-    margin: auto;
-}
-
-
 //MIXIN
 @mixin media-lg {
     @media screen and (max-width: $lg_size) {
@@ -45,15 +37,19 @@ ul {
         @content;
     }
 }
+
+// Common classes
+
+.container {
+    width: 1200px;
+    margin: auto;
     
-@include media-lg {
-    .container {
+    //Container media queries
+    @include media-lg {
         width: 900px;
     }
-}
 
-@include media-md {
-    .container {
+    @include media-md {
         width: 85%;
     }
 }

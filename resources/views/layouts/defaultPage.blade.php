@@ -1,3 +1,7 @@
+<?php 
+$footer_rows = config('footer_rows');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,32 +10,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    @yield('style')
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <title>Le Molisana - Prodotti</title>
+    <title>@yield('pageTitle')</title>
 </head>
 <body>
     <header>
         <img class="logo" src="{{ asset('images/marchio-sito-test.png') }}" alt="Logo Molisana">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a class="active" href="#">Prodotti</a></li>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Prodotti</a></li>
             <li><a href="#">News</a></li>
         </ul>
     </header>
-    <main>
-        <div class="container">
-            @for ($i = 0; $i < count($types); $i++)
-                <h2>{{ $types[$i]['title'] }}</h2>
-                <ul class="products_template">
-                    @for ($j = 0; $j < count($types[$i]['elems']); $j++)
-                        <li>
-                            <img class="product" src= {{ $types[$i]['elems'][$j]['src'] }} alt= {{ $types[$i]['elems'][$j]['titolo']}}>
-                        </li>
-                    @endfor
-                </ul>
-            @endfor
-        </div>
-    </main>
+    @yield('main')
     <footer>
         <div class="container">
             @for ( $i = 0; $i < count($footer_rows); $i++ )
@@ -56,5 +48,6 @@
             @endfor
         </div>
     </footer>
+    @yield('script')
 </body>
 </html>
