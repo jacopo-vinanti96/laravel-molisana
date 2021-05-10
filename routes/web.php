@@ -52,9 +52,13 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/prodotto/{id?}', function ($id = 0) {
-
+    if ( (int)$id < 0 || (int)$id > count( config('paste') ) ) {
+        abort(404);
+    }
     $data = config('paste');
     return view('prodotti')
     ->with( 'data', $data )
     ->with( 'id', $id );
-})->name('prodotti');
+})
+->where( (int)'id', '>=', 0, '<=', count( config('paste') ) )
+->name('prodotti');
