@@ -29,7 +29,7 @@ $footer_rows = config('footer_rows');
             @for ( $i = 0; $i < count($footer_rows); $i++ )
                 <div class="footer__wrapper" >
                     @if ( $footer_rows[$i]['title'] === false )
-                        <img src= {{ $footer_rows[$i]['img'] }} >
+                        <img src= {{ asset($footer_rows[$i]['img']) }} >
                     @else 
                         <h3>{{ $footer_rows[$i]['title'] }}</h3>
                     @endif
