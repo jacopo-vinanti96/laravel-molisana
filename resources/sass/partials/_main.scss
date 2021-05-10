@@ -46,6 +46,30 @@
     img {
         width: 100%;
     }
+    .carousel {
+        text-align: center;
+        position: relative;
+        .fas {
+            position: absolute;
+            font-size: 80px;
+            color: $bg_color_light;
+            top: 50%;
+            transform: translateY( -55% );
+            padding: 20px 0;
+            background-color: $bg_color_btns;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .fa-angle-right {
+            right: 0;
+            padding-left: 10px;
+        }
+        .fa-angle-left {
+            left: 0;
+            padding-right: 15px;
+        }
+
+    }
     p {
         font-size: 20px;
     }

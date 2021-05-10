@@ -19,17 +19,17 @@ ul {
   list-style: none;
 }
 
-.container {
+.container, .carousel img.carousel__img {
   width: 1200px;
   margin: auto;
 }
 @media screen and (max-width: 1300px) {
-  .container {
+  .container, .carousel img.carousel__img {
     width: 900px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .container {
+  .container, .carousel img.carousel__img {
     width: 85%;
   }
 }
@@ -106,6 +106,29 @@ header ul a.active {
 }
 .prodotti__main img {
   width: 100%;
+}
+.prodotti__main .carousel {
+  text-align: center;
+  position: relative;
+}
+.prodotti__main .carousel .fas {
+  position: absolute;
+  font-size: 80px;
+  color: #FFFFFF;
+  top: 50%;
+  transform: translateY(-55%);
+  padding: 20px 0;
+  background-color: #DCEDF2;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.prodotti__main .carousel .fa-angle-right {
+  right: 0;
+  padding-left: 10px;
+}
+.prodotti__main .carousel .fa-angle-left {
+  left: 0;
+  padding-right: 15px;
 }
 .prodotti__main p {
   font-size: 20px;
