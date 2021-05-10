@@ -54,7 +54,6 @@ Route::get('/', function () {
 Route::get('/prodotto/{id?}', function ($id = 0) {
     $data = config('paste');
     if ( $id < 0 || $id >= count( $data ) ) {
-        //abort(404, 'Il prodotto non esiste');
         return response("<h1 style=\"text-align: center; line-height: 100vh\">Siamo spiacenti, il prodotto non esiste</h1>", 404);
     }
     return view('prodotti')
