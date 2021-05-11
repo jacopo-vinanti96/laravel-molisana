@@ -13,9 +13,9 @@
             <img src={{ $data[$id]['src-h'] }} alt="">
         </div>
         <div class="carousel">
-            <a href={{ route( 'prodotti', ['id' => $id ==  0? count($data) - 1 : $id - 1 ] ) }}><i class="fas fa-angle-left"></i></a>
+            <a href={{ route( 'prodotti', ['id' => $prevProd ] ) }}><i class="fas fa-angle-left"></i></a>
             <img class="carousel__img" src={{ $data[$id]['src-p'] }} alt="">
-            <a href={{ route( 'prodotti', ['id' => $id == count($data) - 1? 0 : $id + 1 ] ) }}><i class="fas fa-angle-right"></i></a>
+            <a href={{ route( 'prodotti', ['id' => $nextProd ] ) }}><i class="fas fa-angle-right"></i></a>
         </div>
         <div class="container">
             <p>{!! $data[$id]['descrizione'] !!}</p>

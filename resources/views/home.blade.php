@@ -5,18 +5,18 @@
 @section('main')
     <main class="home__main">
         <div class="container">
-            @for ($i = 0; $i < count($types); $i++)
-                <h2>{{ $types[$i]['title'] }}</h2>
+            @foreach ($types as $type)
+                <h2>{{ $type['title'] }}</h2>
                 <ul class="products_template">
-                    @for ($j = 0; $j < count($types[$i]['elems']); $j++)
+                    @foreach ($type['elems'] as $pasta)
                         <li>
-                            <a href= {{ route( 'prodotti', ['id' => $types[$i]['elems'][$j]['id'] ] ) }}>
-                                <img class="product" src= {{ $types[$i]['elems'][$j]['src'] }} alt= {{ $types[$i]['elems'][$j]['titolo']}}>
+                            <a href= {{ route( 'prodotti', ['id' => $pasta['id'] ] ) }}>
+                                <img class="product" src= {{ $pasta['src'] }} alt= {{ $pasta['titolo']}}>
                             </a>
                         </li>
-                    @endfor
+                    @endforeach
                 </ul>
-            @endfor
+            @endforeach
         </div>
     </main>
 @endsection

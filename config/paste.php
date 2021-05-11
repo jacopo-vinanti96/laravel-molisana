@@ -103,7 +103,7 @@ $data = [
         [
             "src" => "https://www.lamolisana.it/wp-content/uploads/2017/07/58-misto-corto-m.jpg",
             "src-h" => "https://www.lamolisana.it/wp-content/uploads/2017/07/58-misto-corto-h.jpg",
-            "src-p" => "https://www.lamolisana.it/wp-content/uploads/2017/07/58-misto-corto-p.jpg",
+            "src-p" => "https://www.lamolisana.it/wp-content/uploads/2017/07/58-misto-corto-p-2018.jpg",
             "titolo" => "N.58 Misto corto",
             "tipo" => "corta",
             "cottura" => "9 min",

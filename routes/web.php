@@ -47,18 +47,28 @@ Route::get('/', function () {
         ],
     ];
 
-    return view('home')
-    ->with( 'types', $types );
+    return view('home', [
+        'types' => $types
+    ]);
 })->name('home');
 
 Route::get('/prodotto/{id?}', function ($id = 0) {
+    
     $data = config('paste');
+    
     if ( $id < 0 || $id >= count( $data ) ) {
         return response("<h1 style=\"text-align: center; line-height: 100vh\">Siamo spiacenti, il prodotto non esiste</h1>", 404);
     }
-    return view('prodotti')
-    ->with( 'data', $data )
-    ->with( 'id', $id );
+
+    $nextProd = $id == count($data) - 1? 0 : $id + 1;
+    $prevProd = $id == 0? count($data) - 1 : $id - 1;
+
+    return view('prodotti', [
+        'data' => $data,
+        'id' => $id,
+        'prevProd' => $prevProd,
+        'nextProd' => $nextProd
+    ]);
 })
 ->where( (int)'id', '>=', 0, '<=', count( config('paste') ) )
 ->name('prodotti');
