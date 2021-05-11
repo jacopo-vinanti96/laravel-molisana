@@ -40,6 +40,30 @@ ul {
 
 header {
   text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  header {
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    z-index: 10;
+  }
+}
+@media screen and (max-width: 480px) {
+  header *:not(ul):not(ul *):not(nav) {
+    position: relative;
+    z-index: 11;
+  }
 }
 header img.logo {
   width: 200px;
@@ -48,6 +72,7 @@ header ul {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  width: 100%;
 }
 header ul a {
   padding: 15px 8px;
@@ -57,6 +82,47 @@ header ul a {
 }
 header ul a.active {
   background-color: #b2e5fc;
+}
+@media screen and (max-width: 480px) {
+  header ul {
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    bottom: 0px;
+    transition: all 0.8s;
+    margin-top: 0;
+    z-index: 9;
+  }
+  header ul.clicked {
+    opacity: 0.9;
+    pointer-events: initial;
+    bottom: -204px;
+  }
+  header ul a {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-blend-mode: hue;
+    background-color: #FFFFFF;
+    border: 1px solid #000;
+  }
+  header ul a.active {
+    background-image: url("../images/fondo-pag-speciali.jpg");
+    background-blend-mode: hue;
+    background-color: #b2e5fc;
+  }
+}
+header .fa-bars {
+  color: #002d73;
+  font-size: 40px;
+  margin-top: 20px;
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  header .fa-bars {
+    display: block;
+  }
 }
 
 .home__main {

@@ -1842,6 +1842,21 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var navList = document.getElementById('nav__list');
+var hamburger = document.getElementById('hamburger');
+
+function toggleMenu() {
+  console.log(navList.classList);
+
+  if (navList.classList.length > 0) {
+    navList.classList.remove('clicked');
+  } else {
+    navList.classList.add('clicked');
+  }
+}
+
+hamburger.addEventListener('click', toggleMenu);
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
