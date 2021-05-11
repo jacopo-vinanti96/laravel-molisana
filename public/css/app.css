@@ -133,6 +133,28 @@ header ul a.active {
   font-size: 20px;
 }
 
+.news__main {
+  padding: 50px 0;
+}
+.news__main h1 {
+  text-align: center;
+}
+.news__main h2, .news__main p {
+  color: #002d73;
+}
+.news__main ul {
+  margin-top: 30px;
+  background-color: #B8DAE4;
+  padding: 30px;
+  background-image: url("../images/marchio-sito-test.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-blend-mode: soft-light;
+}
+.news__main li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 footer {
   padding-top: 30px;
   color: #8A92A0;

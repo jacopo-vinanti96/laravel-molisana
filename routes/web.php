@@ -72,3 +72,11 @@ Route::get('/prodotto/{id?}', function ($id = 0) {
 })
 ->where( (int)'id', '>=', 0, '<=', count( config('paste') ) )
 ->name('prodotti');
+
+Route::get('/ultime-notizie', function () {
+    $data = config('news');
+    return view('news', [
+        'notizie' => $data
+    ]);
+})
+->name('news');
